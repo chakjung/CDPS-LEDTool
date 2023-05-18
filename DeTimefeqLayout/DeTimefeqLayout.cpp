@@ -1,9 +1,6 @@
 #include "DeTimefeqLayout.h"
 
 DeTimefeqLayout::DeTimefeqLayout() : QVBoxLayout() {
-    // Set margins
-    this->setContentsMargins(30, 30, 30, 30);
-
     // Setup timeFeqLineEditLabel
     timeFeqLineEditLabel.setText("請輸入LED頻率循環時間:");
     timeFeqLineEditLabel.setSizePolicy(QSizePolicy::Maximum,

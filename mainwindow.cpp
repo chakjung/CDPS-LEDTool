@@ -25,12 +25,23 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     // Set up rootWidget
     this->setCentralWidget(&rootWidget);
     // Set up rootLayout
+    rootLayout.setRowStretch(0, 80);
+    rootLayout.setRowStretch(1, 20);
     rootWidget.setLayout(&rootLayout);
 
     // Add deTimefeqLayout to rootLayout
-    rootLayout.addLayout(&deTimefeqLayout, 1);
+    deTimefeqLayout.setContentsMargins(10, 10, 5, 5);
+    rootLayout.addLayout(&deTimefeqLayout, 0, 0);
     // Add enTimefeqLayout to rootLayout
-    rootLayout.addLayout(&enTimefeqLayout, 1);
+    enTimefeqLayout.setContentsMargins(5, 10, 10, 5);
+    rootLayout.addLayout(&enTimefeqLayout, 0, 1);
+
+    // Add deColorLayout to rootLayout
+    deColorLayout.setContentsMargins(10, 5, 5, 10);
+    rootLayout.addLayout(&deColorLayout, 1, 0);
+    // Add enColorLayout to rootLayout
+    enColorLayout.setContentsMargins(5, 5, 10, 10);
+    rootLayout.addLayout(&enColorLayout, 1, 1);
 }
 
 MainWindow::~MainWindow() {}

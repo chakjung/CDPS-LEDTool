@@ -7,10 +7,13 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
+set(CMAKE_CXX_FLAGS "-Werror -Wfatal-errors -Wpedantic -Wall -Wextra")
+
 find_package(Qt5 COMPONENTS Core Widgets REQUIRED)
 
 add_subdirectory(DeTimefeqLayout)
 add_subdirectory(EnTimefeqLayout)
+add_subdirectory(DeColorLayout)
 
 add_executable(${PROJECT_NAME}
     "mainwindow.cpp"
@@ -23,6 +26,7 @@ target_link_libraries(${PROJECT_NAME}
     Qt5::Widgets
     DeTimefeqLayout
     EnTimefeqLayout
+    DeColorLayout
 )
 
 set_target_properties(${PROJECT_NAME} PROPERTIES

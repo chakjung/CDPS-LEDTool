@@ -1,9 +1,6 @@
 #include "EnTimefeqLayout.h"
 
 EnTimefeqLayout::EnTimefeqLayout() : QVBoxLayout() {
-    // Set margins
-    this->setContentsMargins(30, 30, 30, 30);
-
     // Setup timeLineEditLabel
     timeLineEditLabel.setText("請輸入總時間 (毫秒):");
     timeLineEditLabel.setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);

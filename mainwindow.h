@@ -3,10 +3,13 @@
 #include <QMainWindow>
 
 #include <QWidget>
-#include <QHBoxLayout>
+#include <QGridLayout>
 
 #include "DeTimefeqLayout/DeTimefeqLayout.h"
 #include "EnTimefeqLayout/EnTimefeqLayout.h"
+
+#include "DeColorLayout/DeColorLayout.h"
+#include "EnColorLayout/EnColorLayout.h"
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -19,10 +22,15 @@ class MainWindow : public QMainWindow {
     // Root Widget
     QWidget rootWidget;
     // Root layout
-    QHBoxLayout rootLayout;
+    QGridLayout rootLayout;
 
     // Layout for decoding time frequency combo
     DeTimefeqLayout deTimefeqLayout;
     // Layout for encoding time frequency combo
     EnTimefeqLayout enTimefeqLayout;
+
+    // Layout for decoding color
+    DeColorLayout deColorLayout;
+    // Layout for encoding color
+    EnColorLayout enColorLayout;
 };
