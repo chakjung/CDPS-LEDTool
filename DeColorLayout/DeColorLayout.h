@@ -20,9 +20,9 @@ class DeColorLayout : public QGridLayout {
     // Color inputBox
     QLineEdit colorLineEdit;
 
-    // Label to conversion result "Entry"
+    // Label for conversion result: "Entry"
     QLabel en;
-    // Label to conversion result "Exit"
+    // Label for conversion result: "Exit"
     QLabel ex;
     // Label to display conversion result
     QLabel enRed;
